@@ -1,0 +1,18 @@
+<h1>Coffee Drinks</h1>
+
+<p class="boxhead"><%= link_to 'New Coffee Drink', new_coffee_drink_path %></p> 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th></th>
+  </tr>
+ 
+  <% @coffee_drinks.each do |coffee_drink| %>
+    <tr>
+      <td><%= coffee_drink.name %></td>
+      <td><%= coffee_drink.description %></td>
+      <td><%= link_to 'Show', coffee_drink_path(coffee_drink) %></td>
+    </tr>
+  <% end %>
+</table>

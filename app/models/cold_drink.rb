@@ -1,0 +1,2 @@
+class ColdDrink < ApplicationRecord
+end

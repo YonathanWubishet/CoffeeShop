@@ -1,0 +1,49 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+    background: url(welcome_2.png);
+    background-position-x: 65%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 50%;
+  }
+h1 {
+    color: rgb(39, 19, 9);
+    text-align: center;
+    font-size: 400%;
+    text-shadow: 5px 5px rgb(119, 57, 3);;
+    }
+    h2 {
+      color: rgb(39, 19, 9);
+      text-align: left;
+      font-size: 400%;
+      text-shadow: 5px 5px rgb(119, 57, 3);;
+      }
+
+    .boxhead a {
+      font-size: 50px;
+      text-decoration: none;
+      text-shadow: 1px 1px rgb(119, 57, 3);
+    }
+
+    /* unvisited link */
+a:link {
+  color: rgb(112, 100, 100);
+}
+
+/* visited link */
+a:visited {
+  color: rgb(46, 9, 5);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(0, 0, 0);
+}
+
+/* selected link */
+a:active {
+  color: rgb(129, 78, 62);
+}

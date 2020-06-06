@@ -1,0 +1,18 @@
+<h1>Magazines</h1>
+
+<p class="boxhead"><%= link_to 'New magazine', new_magazine_path %></p> 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th></th>
+  </tr>
+ 
+  <% @magazines.each do |magazine| %>
+    <tr>
+      <td><%= magazine.name %></td>
+      <td><%= magazine.description %></td>
+      <td><%= link_to 'Show', magazine_path(magazine) %></td>
+    </tr>
+  <% end %>
+</table>

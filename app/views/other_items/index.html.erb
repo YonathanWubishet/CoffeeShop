@@ -1,0 +1,18 @@
+<h1>Other Items</h1>
+
+<p class="boxhead"><%= link_to 'New Other Item', new_other_item_path %></p> 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th></th>
+  </tr>
+ 
+  <% @other_items.each do |other_item| %>
+    <tr>
+      <td><%= other_item.name %></td>
+      <td><%= other_item.description %></td>
+      <td><%= link_to 'Show', other_item_path(other_item) %></td>
+    </tr>
+  <% end %>
+</table>

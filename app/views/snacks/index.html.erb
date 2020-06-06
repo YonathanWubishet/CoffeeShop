@@ -1,0 +1,18 @@
+<h1>Snacks</h1>
+
+<p class="boxhead"><%= link_to 'New Snack', new_snack_path %></p> 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th></th>
+  </tr>
+ 
+  <% @snacks.each do |snack| %>
+    <tr>
+      <td><%= snack.name %></td>
+      <td><%= snack.description %></td>
+      <td><%= link_to 'Show', snack_path(snack) %></td>
+    </tr>
+  <% end %>
+</table>
