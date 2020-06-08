@@ -13,6 +13,11 @@
       <td><%= cold_drink.name %></td>
       <td><%= cold_drink.description %></td>
       <td><%= link_to 'Show', cold_drink_path(cold_drink) %></td>
+      <td><%= link_to 'Edit', edit_cold_drink_path(cold_drink) %></td>
+                  <td><%= link_to 'Destroy', cold_drink_path(cold_drink),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+      </td>
     </tr>
   <% end %>
 </table>

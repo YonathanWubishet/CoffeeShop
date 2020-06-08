@@ -9,14 +9,40 @@ class MagazinesController < ApplicationController
       end
 
     def new
+      @magazine = Magazine.new
+    end
+
+    def edit
+      @magazine = Magazine.find(params[:id])
     end
 
     def create
         @magazine = Magazine.new(magazine_params)
  
-        @magazine.save
+        if @magazine.save
         redirect_to @magazine
+      else
+        render 'new'
+      end
     end
+
+    def update
+      @magazine = Magazine.find(params[:id])
+     
+      if @magazine.update(magazine_params)
+        redirect_to @magazine
+      else
+        render 'edit'
+      end
+    end
+
+    def destroy
+      @magazine = Magazine.find(params[:id])
+      @magazine.destroy
+   
+      redirect_to magazines_path
+    end
+
     private
     def magazine_params
         params.require(:magazine).permit(:name, :description)
